@@ -12933,6 +12933,7 @@ p.lead {
 section.resume-section {
   display: flex;
   align-items: center;
+  min-height: 100dvh;
 }
 
 section.resume-section .resume-section-content {
@@ -12947,9 +12948,9 @@ section.resume-section .resume-section-content {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   section.resume-section {
-    min-height: 99.5vh;
+    min-height: 100dvh;
   }
 }
 
@@ -13525,7 +13526,7 @@ body {
   .portrait-light {
     max-width: 700px;
     size-adjust: 200%;
-    margin-left: -15rem !important;
+    margin-left: -9rem !important;
   }
 
   .portrait-dark {

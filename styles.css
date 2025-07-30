@@ -13648,14 +13648,3 @@ body {
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
-
-@media (max-width: 768px) {
-  .slide-up-text,
-  .slide-up-text-two {
-    font-size: 1.5rem; /* Adjust as needed */
-    line-height: 1.2;
-    text-align: center;
-    padding: 0 1rem;
-    word-wrap: break-word;
-  }
-}

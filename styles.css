@@ -13248,6 +13248,7 @@ div.year {
   max-width: 300px;
   border-radius: 20%;
   border: 3px solid rgba(0, 0, 0, 1);
+  margin-left: -5rem;
   display: block;
 }
 
@@ -13272,13 +13273,14 @@ section#about {
 .about-image .me-image {
   position: relative;
   z-index: 2;
-  right: -5rem;
+  right: -3rem;
 }
 
 .about-image .dog-image {
   position: absolute;
   bottom: 0;
   z-index: 1;
+  right: 18rem;
 }
 
 .brandeis-seal {
@@ -13304,13 +13306,87 @@ section#about {
   text-align: center !important;
   font-size: 96px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
 }
 
-.about-Sherman{
+.body.dark-mode .about-Cameron {
+  margin-left: -21rem;
+  text-align: center !important;
+  font-size: 96px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-Sherman {
   margin-left: 0rem;
   text-align: center !important;
   font-size: 96px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #dbdbdb;
+}
+
+body.dark-mode.about-Sherman {
+  margin-left: 0rem;
+  text-align: center !important;
+  font-size: 96px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.about-Cameron { color: #616161; }
+.about-Sherman { color: #000000; }
+
+body.dark-mode .about-Cameron { color: #ffffff; }
+body.dark-mode .about-Sherman  { color: #dbdbdb; }
+
+
+
+/* For Mobile*/
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .about-Cameron,
+  .about-Sherman {
+    margin-left: 0 !important;
+    font-size: 2.5rem !important;
+    white-space: normal !important;
+  }
+
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Remove any implicit max-width or padding */
+  #mainNav .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Make the collapsed area fill 100% and align items */
+  #mainNav .navbar-collapse {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Ensure the nav-links group can shrink/grow if necessary */
+  #mainNav .navbar-nav {
+    flex: 1 1 auto;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Push the dark-mode switch to the far edge */
+  #darkModeToggle {
+    margin-left: 1rem;
+  }
 }

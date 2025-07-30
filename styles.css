@@ -12924,14 +12924,6 @@ section.resume-section .resume-section-content {
   list-style-position: inside !important;
 }
 
-.resume-section #about .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-
-
 
 @media (min-width: 768px) {
   section.resume-section {
@@ -13303,6 +13295,22 @@ section#about {
 }
 
 #about li {
+  margin-left: -15rem;
   text-align: left !important;
-  left: auto !important;
+}
+
+.about-Cameron {
+  margin-left: -21rem;
+  text-align: center !important;
+  font-size: 96px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+.about-Sherman{
+  margin-left: 0rem;
+  text-align: center !important;
+  font-size: 96px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dbdbdb;
 }

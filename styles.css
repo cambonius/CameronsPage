@@ -266,10 +266,10 @@ body.dark-mode h4 {
 
 h1,
 .h1 {
-  font-size: calc(1.725rem + 5.7vw);
+  font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
 
   h1,
   .h1 {
@@ -280,6 +280,14 @@ h1,
 h2,
 .h2 {
   font-size: calc(1.475rem + 2.7vw);
+}
+
+
+h2,
+.h2 {
+  font-size: 3.5rem;
+  text-align: left;
+  margin-left: -15rem;
 }
 
 @media (min-width: 1200px) {
@@ -341,6 +349,16 @@ p,
   text-align: left;
   margin-left: -15rem;
 }
+
+@media (max-width:1180.98px) {
+
+  /* target all paragraphs and your experience list items */
+  p,
+  #experience li {
+    text-align: left !important;
+  }
+}
+
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
@@ -8917,7 +8935,7 @@ body.dark-mode.nav {
 }
 
 .px-4 {
-  padding-right: 1.5rem !important;
+  padding-right: 2.5rem !important;
   padding-left: 1.5rem !important;
 }
 
@@ -9050,6 +9068,10 @@ body.dark-mode.nav {
 
 .ps-5 {
   padding-left: 3rem !important;
+}
+
+.ps-6 {
+  padding-left: 6rem !important;
 }
 
 .gap-0 {
@@ -12927,7 +12949,7 @@ section.resume-section .resume-section-content {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: 99.5vh;
   }
 }
 
@@ -13054,6 +13076,13 @@ body.dark-mode .slide-up-text {
   color: #dbdbdb;
 }
 
+@media (max-width: 1200px) {
+  .slide-up-text {
+    font-size: 300%;
+    top: 10%;
+    padding: 0.5em 1em;
+  }
+}
 
 .slide-up-text-two {
   position: absolute;
@@ -13070,6 +13099,15 @@ body.dark-mode .slide-up-text {
   max-width: 90vw;
   text-align: center;
 }
+
+@media (max-width: 1200px) {
+  .slide-up-text-two {
+    font-size: 450%;
+    top: 15%;
+    padding: 0.5em 1em;
+  }
+}
+
 
 body.dark-mode .slide-up-text-two {
   color: #dbdbdb;
@@ -13096,7 +13134,6 @@ body.dark-mode .slide-up-text-two {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20vh;
   text-align: center;
 }
 
@@ -13106,7 +13143,6 @@ body.dark-mode .slide-up-text-two {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20vh;
   text-align: center;
 }
 
@@ -13118,7 +13154,7 @@ body {
     url('assets/img/BackgroundFlipped.png'),
     url('assets/img/Background.png');
   background-position:
-    center calc(100% + 70px),
+    center calc(100% + 65px),
     center top,
     center top;
   background-size:
@@ -13143,7 +13179,7 @@ body.dark-mode {
     url('assets/img/BackgroundFlippedDark.png'),
     url('assets/img/BackgroundDark.png');
   background-position:
-    center calc(100% + 70px),
+    center calc(100% + 65px),
     center top,
     center top;
   background-size:
@@ -13161,6 +13197,21 @@ body.dark-mode {
   background-color: transparent;
 }
 
+@media (max-width: 1199.98px) {
+  /* shrink the tree image on narrow viewports */
+  body,
+  body.dark-mode {
+    /* first pair = Tree/TreeDark, 2nd & 3rd stay as “cover” */
+    background-size:
+      100vw 50vh,    /* ↓ adjust these values until it looks right */
+      cover,
+      cover !important;
+    background-position:
+      center calc(100% + 42px),
+      center top,
+      center top;
+  }
+}
 
 .cv-container {
   margin: 0 auto;
@@ -13175,7 +13226,6 @@ body.dark-mode {
 @media (max-width: 768px) {
   .cv-container div {
     height: 400px;
-    /* Reduce preview height on smaller screens */
   }
 }
 
@@ -13330,17 +13380,29 @@ body.dark-mode.about-Sherman {
 }
 
 
-.about-Cameron { color: #616161; }
-.about-Sherman { color: #000000; }
+.about-Cameron {
+  color: #616161;
+}
 
-body.dark-mode .about-Cameron { color: #ffffff; }
-body.dark-mode .about-Sherman  { color: #dbdbdb; }
+.about-Sherman {
+  color: #000000;
+}
+
+body.dark-mode .about-Cameron {
+  color: #ffffff;
+}
+
+body.dark-mode .about-Sherman {
+  color: #dbdbdb;
+}
 
 
 
 /* For Mobile*/
-img, iframe, video {
-  max-width: 100%;
+img,
+iframe,
+video {
+  max-width: 1000%;
   height: auto;
 }
 
@@ -13350,6 +13412,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .about-Cameron,
   .about-Sherman {
     margin-left: 0 !important;
@@ -13363,7 +13426,10 @@ body {
   }
 }
 
+
+
 @media (max-width: 991px) {
+
   /* Remove any implicit max-width or padding */
   #mainNav .container-fluid {
     padding-left: 0;
@@ -13388,5 +13454,191 @@ body {
   /* Push the dark-mode switch to the far edge */
   #darkModeToggle {
     margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #about .html {
+    font-size: 150%;
+    /* 16px → ~17.6px */
+  }
+
+  #about .body {
+    line-height: 1.6;
+    /* improve readability with tighter vertical rhythm */
+  }
+}
+
+@media screen and (max-width:1100px) {
+  #mainNav .container-fluid {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  #navbarResponsive {
+    justify-content: flex-start !important;
+  }
+
+  .navbar-nav {
+    flex-grow: 0 !important;
+  }
+
+  .switch {
+    margin-left: -6rem !important;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  #experience .resume-section {
+    padding-bottom: 15rem !important;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  /* Make the collapse wrapper go full‑width */
+  #mainNav .navbar-nav .nav-link {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* target the entire h1 */
+  h1.text-nowrap {
+    font-size: 2.5rem;   /* adjust this up or down */
+  }
+
+  /* ––– or if you want to target each part separately ––– */
+  .about-Cameron,
+  .about-Sherman {
+    margin-left: -17.5rem !important;  /* adjust this to align */
+    font-size: 10.5rem;   /* same value so they match */
+  }
+
+  .about-Sherman {
+    margin-left: -27rem !important;  /* adjust this to align */
+    font-size: 15rem;   /* same value so they match */
+  }
+
+  .portrait-light {
+    max-width: 700px;
+    size-adjust: 200%;
+    margin-left: -15rem !important;
+  }
+
+  .portrait-dark {
+    max-width: 100%;
+  }
+
+
+}
+
+/* allow the title to wrap on phones */
+/* stack the name on phones */
+@media (max-width: 1200px) {
+  /* let the h1 wrap again */
+  h1.text-nowrap {
+    white-space: normal !important;
+    text-align: center;   /* optional: center it */
+  }
+
+  /* force each span onto its own line */
+  .about-Cameron,
+  .about-Sherman {
+    display: block;
+  }
+
+  .about-Cameron {
+    margin-left: -15rem !important;
+  }
+
+  .about-Sherman{
+    margin-left: -21rem !important;
+  }
+}
+
+/* at the end of styles.css */
+@media screen and (max-width: 1200px) {
+  /* if you want it in both light‑ and dark‑mode, target .portrait-dark directly: */
+
+  /* OR, if you only want this in dark‑mode: */
+  body.dark-mode .portrait-dark {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+  body.dark-mode .portrait-dark.dog-image {
+    max-width: 400px;
+    width: 50%;
+    margin-right: 8rem;
+    height: auto;
+  }
+
+  #about .subheading.mb-5 {
+    font-size: 2.5rem;       /* ~24px; adjust to taste */
+  }
+
+  /* enlarge the lead paragraph */
+  #about p.lead {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  /* enlarge all list items in that block */
+  #about .subheading.mb-5 + p.lead + ul li,
+  p.lead + ul li,
+  #about ul li {
+    font-size: 2.5rem;       /* ~18px */
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  /* bump up your social icons on narrower viewports */
+  .social-icons .social-icon {
+    height: 9.5rem;
+    width:  9.5rem;
+    font-size: 6rem;
+  }
+  
+  .social-icons {
+    display: flex;              /* ensure flex layout */
+    justify-content: center;    /* center them in their container */
+    gap: 20rem;                  /* 1rem between each icon */
+  }
+}
+
+/* ── EXPERIENCE SECTION TYPOGRAPHY ── */
+@media screen and (max-width: 1199.98px) {
+  /* center and enlarge the section title */
+  #experience .section-heading,
+  #experience h2 {
+    text-align: center !important;
+    font-size: 5rem !important;       /* adjust as needed */
+    }
+
+  /* enlarge all text inside the experience block */
+  #experience p,
+  #experience ul li {
+    font-size: 1.5rem;               /* ~20px; tweak as desired */
+    line-height: 1.6;                 /* keep good readability */
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  /* center and enlarge the section title */
+  #education .section-heading,
+  #education h2 {
+    text-align: center !important;
+    font-size: 5rem !important;       /* adjust as needed */
+    }
+
+  /* enlarge all text inside the experience block */
+  #education p,
+  #education ul li {
+    font-size: 2.3rem;               /* ~20px; tweak as desired */
+    line-height: 1.5;                 /* keep good readability */
   }
 }

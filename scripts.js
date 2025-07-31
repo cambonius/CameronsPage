@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const darkModeToggle = document.getElementById("darkModeToggle");
-  const treeImage      = document.getElementById("treeImage");
+  const treeImage = document.getElementById("treeImage");
 
   function updateTreeImage() {
     if (!treeImage) return;
@@ -9,10 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (darkModeToggle) {
-    const darkModeEnabled = localStorage.getItem("darkMode") === "true";
-    if (darkModeEnabled) {
+    const storedPreference = localStorage.getItem("darkMode");
+
+    if (storedPreference === "true") {
       darkModeToggle.checked = true;
       document.body.classList.add("dark-mode");
+    } else {
+      darkModeToggle.checked = false;
+      document.body.classList.remove("dark-mode");
     }
 
     darkModeToggle.addEventListener("change", function () {
@@ -27,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const hamMenu       = document.querySelector(".ham-menu");
+  const hamMenu = document.querySelector(".ham-menu");
   const offScreenMenu = document.querySelector(".off-screen-menu");
 
   if (hamMenu && offScreenMenu) {
@@ -38,9 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // *** NEW: close when any menu link is clicked ***
-    const menuLinks = offScreenMenu.querySelectorAll("a"); 
+    const menuLinks = offScreenMenu.querySelectorAll("a");
     menuLinks.forEach(link =>
-      link.addEventListener("click", () => {a
+      link.addEventListener("click", () => {
+        a
         hamMenu.classList.remove("active");
         offScreenMenu.classList.remove("active");
       })

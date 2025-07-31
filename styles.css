@@ -192,14 +192,6 @@ h1 {
   color: #FFFFFF;
 }
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #FFFFFF;
-    /* White for dark mode */
-  }
-}
-
 hr {
   display: block;
   width: calc(100% + 15rem);
@@ -208,9 +200,6 @@ hr {
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
 }
-
-
-
 
 
 h6,

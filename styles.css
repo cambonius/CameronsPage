@@ -326,7 +326,7 @@ p,
   margin-left: -15rem;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
 
   /* target all paragraphs and your experience list items */
   p,
@@ -2373,7 +2373,7 @@ figcaption {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .table-responsive-xl {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -6388,7 +6388,7 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .modal-fullscreen-xl-down {
     width: 100vw;
     max-width: none;
@@ -7368,7 +7368,7 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .offcanvas-xl {
     position: fixed;
     bottom: 0;
@@ -7385,13 +7385,13 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) and (prefers-reduced-motion: reduce) {
+@media (max-width: 643px) and (prefers-reduced-motion: reduce) {
   .offcanvas-xl {
     transition: none;
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .offcanvas-xl.offcanvas-start {
     top: 0;
     left: 0;
@@ -7401,7 +7401,7 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .offcanvas-xl.offcanvas-end {
     top: 0;
     right: 0;
@@ -7411,7 +7411,7 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .offcanvas-xl.offcanvas-top {
     top: 0;
     right: 0;
@@ -7423,7 +7423,7 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .offcanvas-xl.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -7434,7 +7434,7 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
 
   .offcanvas-xl.showing,
   .offcanvas-xl.show:not(.hiding) {
@@ -7442,7 +7442,7 @@ body.dark-mode.nav {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
 
   .offcanvas-xl.showing,
   .offcanvas-xl.hiding,
@@ -13021,7 +13021,7 @@ body.dark-mode .slide-up-text-two {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .slide-up-text, .slide-up-text-two {
     font-size: 2rem;
     top: 15%;
@@ -13105,7 +13105,7 @@ body.dark-mode {
   background-color: transparent;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   /* shrink the tree image on narrow viewports */
   body,
   body.dark-mode {
@@ -13336,7 +13336,7 @@ body {
 
 
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
 
   /* Remove any implicit max-width or padding */
   #mainNav .container-fluid {
@@ -13365,7 +13365,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 600px) {
   #mainNav .container-fluid {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -13385,14 +13385,14 @@ body {
 }
 
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   #experience .resume-section {
     padding-bottom: 15rem !important;
   }
 }
 
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   /* Make the collapse wrapper go full‑width */
   #mainNav .navbar-nav .nav-link {
     font-size: 1.5rem;
@@ -13400,7 +13400,7 @@ body {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   /* target the entire h1 */
   h1.text-nowrap {
     font-size: 2.5rem;   /* adjust this up or down */
@@ -13433,7 +13433,7 @@ body {
 
 /* allow the title to wrap on phones */
 /* stack the name on phones */
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   /* let the h1 wrap again */
   h1.text-nowrap {
     white-space: normal !important;
@@ -13456,7 +13456,7 @@ body {
 }
 
 /* at the end of styles.css */
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 600px) {
   /* if you want it in both light‑ and dark‑mode, target .portrait-dark directly: */
 
   /* OR, if you only want this in dark‑mode: */
@@ -13492,7 +13492,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 600px) {
   /* bump up your social icons on narrower viewports */
   .social-icons .social-icon {
     height: 3rem;
@@ -13508,7 +13508,7 @@ body {
 }
 
 /* ── EXPERIENCE AND EDUCATION SECTION TYPOGRAPHY ── */
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 600px) {
     #experience h2,
   #education h2 {
     text-align: center !important;
@@ -13533,7 +13533,7 @@ body {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 643px) {
   .container-fluid.p-0 {
     padding-left: 1rem;
     padding-right: 1rem;

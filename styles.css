@@ -195,7 +195,6 @@ h1 {
 hr {
   display: block;
   width: calc(100% + 15rem);
-  margin-left: -156rem;
   border: none;
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
@@ -336,7 +335,6 @@ p,
 #experience li {
   margin-top: 0;
   text-align: left;
-  margin-left: -15rem;
 }
 
 @media (max-width:1180.98px) {
@@ -13789,4 +13787,29 @@ nav {
 .no-scroll {
   overflow: hidden;
   height: 100vh;
+}
+
+@media (max-width: 767px) {
+  p,
+  #experience li,
+  #education li,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-left: 0 !important;
+    text-align: center !important;
+  }
+
+  hr {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .about-container,
+  .resume-section-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

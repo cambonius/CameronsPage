@@ -12989,11 +12989,18 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-html,
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100%;
-  min-height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 
 .center {
   display: block;
@@ -13076,7 +13083,7 @@ body.dark-mode .slide-up-text {
 
 .slide-up-text-two {
   position: absolute;
-  left: 50%;
+  left: 50vw;
   top: 20%;
   transform: translate(-50%, 100%);
   opacity: 0;
@@ -13086,13 +13093,13 @@ body.dark-mode .slide-up-text {
   animation: slideUpFadeIn 2.0s ease-out 1.5s forwards;
   z-index: 2;
   width: max-content;
-  max-width: 90vw;
+  max-width: 150vw;
   text-align: center;
 }
 
 @media (max-width: 1210.98px) {
   .slide-up-text-two {
-    font-size: 450%;
+    font-size: 400%;
     top: 15%;
     padding: 0.5em 1em;
   }
@@ -13185,22 +13192,6 @@ body.dark-mode {
     fixed,
     fixed;
   background-color: transparent;
-}
-
-@media (max-width: 1210.98px) {
-  /* shrink the tree image on narrow viewports */
-  body,
-  body.dark-mode {
-    /* first pair = Tree/TreeDark, 2nd & 3rd stay as “cover” */
-    background-size:
-      100vw 50vh,    /* ↓ adjust these values until it looks right */
-      cover,
-      cover !important;
-    background-position:
-      center calc(100% + 42px),
-      center top,
-      center top;
-  }
 }
 
 .cv-container {
@@ -13474,7 +13465,7 @@ body {
   }
 
   .switch {
-    margin-left: -6rem !important;
+    margin-top: 6rem !important;
   }
 }
 
@@ -13654,37 +13645,43 @@ body {
   }
 }
 
-@media (min-width: 421px) {
+@media (max-width: 412px) {
   /* hide the hamburger toggle */
   .ham-menu {
     display: none;
   }
 
-.off-screen-menu{
-  background-image: url('assets/img/Background.png');
-  height: 100vh;
-  width: 100%;
-  max-width: 500px;
+.off-screen-menu {
   position: fixed;
   top: 0;
-  left: -500px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("assets/img/Background.png");
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  transition: left 0.3s ease-in-out;
-  font-size: 3rem;
-  z-index: 100;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  font-size: 2rem;
 }
+
+.off-screen-menu.active {
+  transform: translateX(0);
+}
+ 
+
+
 
 body.dark-mode .off-screen-menu {
   /* dark-mode background */
   background-image: url("assets/img/BackgroundDark.png");
 }
 
-.off-screen-menu.active{
-  left: 0;
-}
 nav {
   padding: 1rem;
   display: flex;
@@ -13738,4 +13735,58 @@ nav {
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+}
+
+/* Hide desktop navbar below 412px */
+#mainNav {
+  display: none;
+}
+
+@media (min-width: 412px) {
+  #mainNav {
+    display: block;
+  }
+
+  .off-screen-menu,
+  .ham-menu {
+    display: none !important;
+  }
+}
+
+.off-screen-menu ul {
+  list-style: none;         /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;               /* Adds space between list items */
+}
+
+.off-screen-menu li {
+  margin: 0;                 /* Reset any default margin */
+}
+
+.off-screen-menu .nav-link {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: inherit;            /* Inherit text color (or set your own) */
+  text-align: center;
+}
+
+.toggle-icon {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  color: inherit; /* Matches text color in light/dark mode */
+}
+
+.toggle-icon-desktop {
+  margin-right: 3.5rem;
+  text-align: right;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }

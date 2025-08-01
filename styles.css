@@ -13199,12 +13199,14 @@ body.dark-mode {
 }
 
 @media (max-width: 1210.98px) {
+
   /* shrink the tree image on narrow viewports */
   body,
   body.dark-mode {
     /* first pair = Tree/TreeDark, 2nd & 3rd stay as “cover” */
     background-size:
-      100vw 50vh,    /* ↓ adjust these values until it looks right */
+      100vw 50vh,
+      /* ↓ adjust these values until it looks right */
       cover,
       cover !important;
     background-position:
@@ -13353,33 +13355,17 @@ section#about {
 }
 
 .about-Cameron {
-  margin-left: -21rem;
+  margin-left: -12.5rem;
   text-align: center !important;
-  font-size: 96px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.body.dark-mode .about-Cameron {
-  margin-left: -21rem;
-  text-align: center !important;
-  font-size: 96px;
+  font-size: 8.25rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .about-Sherman {
-  margin-left: 0rem;
   text-align: center !important;
-  font-size: 96px;
+  font-size: 8.25rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-body.dark-mode.about-Sherman {
-  margin-left: 0rem;
-  text-align: center !important;
-  font-size: 96px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 
 .about-Cameron {
   color: #616161;
@@ -13428,48 +13414,6 @@ body {
 }
 
 
-
-@media (max-width: 991px) {
-
-  /* Remove any implicit max-width or padding */
-  #mainNav .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Make the collapsed area fill 100% and align items */
-  #mainNav .navbar-collapse {
-    width: 100%;
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Ensure the nav-links group can shrink/grow if necessary */
-  #mainNav .navbar-nav {
-    flex: 1 1 auto;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  /* Push the dark-mode switch to the far edge */
-  #darkModeToggle {
-    margin-left: 1rem;
-  }
-}
-
-@media (min-width: 1210.98px) {
-  #about .html {
-    font-size: 150%;
-    /* 16px → ~17.6px */
-  }
-
-  #about .body {
-    line-height: 1.6;
-    /* improve readability with tighter vertical rhythm */
-  }
-}
-
 @media screen and (max-width:1210.98px) {
   #mainNav .container-fluid {
     padding-left: 0.5rem !important;
@@ -13498,6 +13442,7 @@ body {
 
 
 @media (max-width: 1210.98px) {
+
   /* Make the collapse wrapper go full‑width */
   #mainNav .navbar-nav .nav-link {
     font-size: 1.5rem;
@@ -13506,21 +13451,27 @@ body {
 }
 
 @media (max-width: 1210.98px) {
+
   /* target the entire h1 */
   h1.text-nowrap {
-    font-size: 2.5rem;   /* adjust this up or down */
+    font-size: 2.5rem;
+    /* adjust this up or down */
   }
 
   /* ––– or if you want to target each part separately ––– */
   .about-Cameron,
   .about-Sherman {
-    margin-left: -17.5rem !important;  /* adjust this to align */
-    font-size: 10.5rem;   /* same value so they match */
+    margin-left: -17.5rem !important;
+    /* adjust this to align */
+    font-size: 10.5rem;
+    /* same value so they match */
   }
 
   .about-Sherman {
-    margin-left: -27rem !important;  /* adjust this to align */
-    font-size: 15rem;   /* same value so they match */
+    margin-left: -27rem !important;
+    /* adjust this to align */
+    font-size: 15rem;
+    /* same value so they match */
   }
 
   .portrait-light {
@@ -13539,10 +13490,12 @@ body {
 /* allow the title to wrap on phones */
 /* stack the name on phones */
 @media (max-width: 1210.98px) {
+
   /* let the h1 wrap again */
   h1.text-nowrap {
     white-space: normal !important;
-    text-align: center;   /* optional: center it */
+    text-align: center;
+    /* optional: center it */
   }
 
   /* force each span onto its own line */
@@ -13555,7 +13508,7 @@ body {
     margin-left: -15rem !important;
   }
 
-  .about-Sherman{
+  .about-Sherman {
     margin-left: -21rem !important;
   }
 }
@@ -13579,7 +13532,8 @@ body {
   }
 
   #about .subheading.mb-5 {
-    font-size: 2.5rem;       /* ~24px; adjust to taste */
+    font-size: 2.5rem;
+    /* ~24px; adjust to taste */
   }
 
   /* enlarge the lead paragraph */
@@ -13589,58 +13543,71 @@ body {
   }
 
   /* enlarge all list items in that block */
-  #about .subheading.mb-5 + p.lead + ul li,
-  p.lead + ul li,
+  #about .subheading.mb-5+p.lead+ul li,
+  p.lead+ul li,
   #about ul li {
-    font-size: 2.5rem;       /* ~18px */
+    font-size: 2.5rem;
+    /* ~18px */
   }
 }
 
 @media screen and (max-width: 1210.98px) {
+
   /* bump up your social icons on narrower viewports */
   .social-icons .social-icon {
     height: 9.5rem;
-    width:  9.5rem;
+    width: 9.5rem;
     font-size: 6rem;
   }
-  
+
   .social-icons {
-    display: flex;              /* ensure flex layout */
-    justify-content: center;    /* center them in their container */
-    gap: 20rem;                  /* 1rem between each icon */
+    display: flex;
+    /* ensure flex layout */
+    justify-content: center;
+    /* center them in their container */
+    gap: 20rem;
+    /* 1rem between each icon */
   }
 }
 
 /* ── EXPERIENCE SECTION TYPOGRAPHY ── */
 @media screen and (max-width: 1210.98px) {
+
   /* center and enlarge the section title */
   #experience .section-heading,
   #experience h2 {
     text-align: center !important;
-    font-size: 5rem !important;       /* adjust as needed */
-    }
+    font-size: 5rem !important;
+    /* adjust as needed */
+  }
 
   /* enlarge all text inside the experience block */
   #experience p,
   #experience ul li {
-    font-size: 1.5rem;               /* ~20px; tweak as desired */
-    line-height: 1.6;                 /* keep good readability */
+    font-size: 1.5rem;
+    /* ~20px; tweak as desired */
+    line-height: 1.6;
+    /* keep good readability */
   }
 }
 
 @media screen and (max-width: 1210.98px) {
+
   /* center and enlarge the section title */
   #education .section-heading,
   #education h2 {
     text-align: center !important;
-    font-size: 5rem !important;       /* adjust as needed */
-    }
+    font-size: 5rem !important;
+    /* adjust as needed */
+  }
 
   /* enlarge all text inside the experience block */
   #education p,
   #education ul li {
-    font-size: 2.3rem;               /* ~20px; tweak as desired */
-    line-height: 1.5;                 /* keep good readability */
+    font-size: 2.3rem;
+    /* ~20px; tweak as desired */
+    line-height: 1.5;
+    /* keep good readability */
   }
 }
 
@@ -13665,88 +13632,118 @@ body {
   }
 }
 
-@media (min-width: 421px) {
+@media (max-width: 425px) {
+
   /* hide the hamburger toggle */
   .ham-menu {
     display: none;
   }
 
-.off-screen-menu{
-  background-image: url('assets/img/Background.png');
-  height: 100vh;
-  width: 100%;
-  max-width: 500px;
-  position: fixed;
-  top: 0;
-  left: -500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: left 0.3s ease-in-out;
-  font-size: 3rem;
-  z-index: 100;
+  .off-screen-menu {
+    background-image: url('assets/img/Background.png');
+    height: 100vh;
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    top: 0;
+    left: -500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease-in-out;
+    font-size: 3rem;
+    z-index: 100;
+  }
+
+  body.dark-mode .off-screen-menu {
+    /* dark-mode background */
+    background-image: url("assets/img/BackgroundDark.png");
+  }
+
+  .off-screen-menu.active {
+    left: 0;
+  }
+
+  nav {
+    padding: 1rem;
+    display: flex;
+    background-color: #011f3d;
+  }
+
+  .ham-menu {
+    position: fixed;
+    /* fixes it to the viewport */
+    top: 1rem;
+    /* 16px from top of screen */
+    left: 1rem;
+    /* 16px from left (or right:1rem; if you prefer right) */
+    z-index: 1100;
+    /* above everything else */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    height: 50px;
+    width: 50px;
+  }
+
+  .ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+  }
+
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
 }
 
-body.dark-mode .off-screen-menu {
-  /* dark-mode background */
-  background-image: url("assets/img/BackgroundDark.png");
+/* Hide custom hamburger and side menu on large screens */
+@media (min-width: 992px) {
+  .ham-menu,
+  .off-screen-menu {
+    display: none !important;
+  }
+
+  #mainNav {
+    display: flex !important;
+  }
 }
 
-.off-screen-menu.active{
-  left: 0;
-}
-nav {
-  padding: 1rem;
-  display: flex;
-  background-color: #011f3d;
-}
+@media (min-width: 992px) {
+  body {
+    font-size: 1.25rem; /* or 1.125rem */
+  }
 
-.ham-menu {
-  position: fixed;    /* fixes it to the viewport */
-  top: 1rem;          /* 16px from top of screen */
-  left: 1rem;         /* 16px from left (or right:1rem; if you prefer right) */
-  z-index: 1100;      /* above everything else */
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5rem;
-  height: 50px;
-  width: 50px;
-}
-
-.ham-menu span{
-  height: 5px;
-  width: 100%;
-  background-color: white;
-  border-radius: 25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: .3s ease;
-}
-
-.ham-menu span:nth-child(1){
-  top: 25%;
-}
-
-.ham-menu span:nth-child(3){
-  top: 75%;
-}
-
-.ham-menu.active span:nth-child(1){
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.ham-menu.active span:nth-child(2){
-  opacity: 0;
-}
-
-.ham-menu.active span:nth-child(3){
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
+  .resume-section p,
+  .resume-section li {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
 }

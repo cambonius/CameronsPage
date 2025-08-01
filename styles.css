@@ -192,25 +192,13 @@ h1 {
   color: #FFFFFF;
 }
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #FFFFFF;
-    /* White for dark mode */
-  }
-}
-
 hr {
   display: block;
   width: calc(100% + 15rem);
-  margin-left: -156rem;
   border: none;
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
 }
-
-
-
 
 
 h6,
@@ -347,7 +335,6 @@ p,
 #experience li {
   margin-top: 0;
   text-align: left;
-  margin-left: -15rem;
 }
 
 @media (max-width:1180.98px) {
@@ -13000,11 +12987,18 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-html,
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100%;
-  min-height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 
 .center {
   display: block;
@@ -13087,7 +13081,7 @@ body.dark-mode .slide-up-text {
 
 .slide-up-text-two {
   position: absolute;
-  left: 50%;
+  left: 50vw;
   top: 20%;
   transform: translate(-50%, 100%);
   opacity: 0;
@@ -13097,13 +13091,13 @@ body.dark-mode .slide-up-text {
   animation: slideUpFadeIn 2.0s ease-out 1.5s forwards;
   z-index: 2;
   width: max-content;
-  max-width: 90vw;
+  max-width: 150vw;
   text-align: center;
 }
 
 @media (max-width: 1210.98px) {
   .slide-up-text-two {
-    font-size: 450%;
+    font-size: 400%;
     top: 15%;
     padding: 0.5em 1em;
   }
@@ -13429,7 +13423,7 @@ body {
   }
 
   .switch {
-    margin-left: -6rem !important;
+    margin-top: 6rem !important;
   }
 }
 

@@ -23,23 +23,27 @@
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container-fluid px-4 d-flex justify-content-center">
-            <ul class="navbar-nav d-flex flex-row justify-content-center" style="gap: 1rem;">
-                <li class="nav-item"><a class="nav-link" href="#title">Title</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#engr11a">ENGR11a Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#other-projects">Other Projects</a></li>
-            </ul>
-            <label class="switch mb-0 ms-lg-3 ms-0">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider round"></span>
-            </label>
+        <div class="container-fluid px-4 d-none d-lg-block">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#title">Title</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#engr11a">ENGR11a Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#other-projects">Other Projects</a>
+                    </li>
+                </ul>
+                <label class="switch mb-0 ms-3">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
-        <div class="toggle-icon toggle-icon-desktop">☀️ / 🌙</div>
     </nav>
-    <!-- Page Content-->
     <div class="off-screen-menu">
         <ul>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#title">Title</a></li>
@@ -50,10 +54,9 @@
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#other-projects">Other Projects</a>
         </ul>
         <label class="switch mb-0 ms-lg-3 ms-0">
-            <input type="checkbox" id="darkModeToggleOffScreen">
+            <input type="checkbox" id="darkModeToggle">
             <span class="slider round"></span>
         </label>
-        <div class="toggle-icon">☀️ / 🌙</div>
     </div>
     <div class="ham-menu">
         <span></span>

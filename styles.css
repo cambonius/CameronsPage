@@ -12799,12 +12799,6 @@ body.dark-mode.nav {
 }
 
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-    padding-left: 17rem;
-  }
-}
 
 
 
@@ -12989,9 +12983,9 @@ input:checked+.slider:before {
 
 html, body {
   margin: 0;
-  padding: 0;
+  padding-top: 2.375rem;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
@@ -13051,20 +13045,46 @@ body.dark-mode .nav-link {
   font-weight: 500;
 }
 
+/* make #title a positioned container */
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* pull the light-mode tree into the title section */
+  background-image: url('assets/img/Tree.png');
+  background-position: center calc(100%);
+  background-size: 50vw 75vh;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* swap to the dark-mode tree when in dark mode */
+body.dark-mode #title {
+  background-image: url('assets/img/TreeDark.png');
+}
+
+.title-wrapper {
+  min-height: 65vh;
+  margin-top: -25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
 .slide-up-text {
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%, 200%);
+  margin-bottom: 10%;
   opacity: 0;
   font-size: clamp(1rem, 3vw, 2.5rem);
   font-weight: bold;
   color: #222;
-  animation: slideUpFadeIn 1.2s ease-out 0.5s forwards;
   z-index: 2;
   width: max-content;
-  max-width: 90vw;
   text-align: center;
+  animation: slideUpFadeIn 1s ease-out forwards;
+  animation-delay: 1s;
 }
 
 body.dark-mode .slide-up-text {
@@ -13080,19 +13100,28 @@ body.dark-mode .slide-up-text {
 }
 
 .slide-up-text-two {
-  position: absolute;
-  left: 50vw;
-  top: 20%;
-  transform: translate(-50%, 100%);
   opacity: 0;
   font-size: clamp(2rem, 6vw, 5rem);
-  font-weight: 600;
+  font-weight: bold;
   color: #222;
-  animation: slideUpFadeIn 2.0s ease-out 1.5s forwards;
   z-index: 2;
   width: max-content;
   max-width: 150vw;
   text-align: center;
+  animation: slideUpFadeIn 1s ease-out forwards;
+  animation-delay: 2s;
+}
+
+
+@keyframes slideUpFadeIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1210.98px) {
@@ -13116,22 +13145,6 @@ body.dark-mode .slide-up-text-two {
   }
 }
 
-@keyframes slideUpFadeIn {
-  to {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
-}
-
-.title-wrapper {
-  min-height: 65vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .name-wrapper {
   min-height: 65vh;
   display: flex;
@@ -13143,70 +13156,31 @@ body.dark-mode .slide-up-text-two {
 
 
 body {
-  padding-top: 3.375rem;
-  background-image:
-    url('assets/img/Tree.png'),
-    url('assets/img/BackgroundFlipped.png'),
-    url('assets/img/Background.png');
-  background-position:
-    center calc(100% + 65px),
-    center top,
-    center top;
-  background-size:
-    50vw 65vh,
-    cover,
-    cover;
-  background-repeat:
-    no-repeat,
-    repeat-y,
-    repeat-y;
-  background-attachment:
-    scroll,
-    fixed,
-    fixed;
+  padding-top: 3.375rem;                /* keep your navbar offset */
+  background-image: url('assets/img/Background.png');
+  background-position: center center;   /* center on both axes */
+  background-size: cover;               /* always fill, cropping if necessary */
+  background-repeat: no-repeat;         /* no tiling */
+  background-attachment: fixed;         /* optional: fixed for parallax feel */
   background-color: transparent;
 }
 
 body.dark-mode {
   padding-top: 3.375rem;
-  background-image:
-    url('assets/img/TreeDark.png'),
-    url('assets/img/BackgroundFlippedDark.png'),
-    url('assets/img/BackgroundDark.png');
-  background-position:
-    center calc(100% + 65px),
-    center top,
-    center top;
-  background-size:
-    50vw 65vh,
-    cover,
-    cover;
-  background-repeat:
-    no-repeat,
-    repeat-y,
-    repeat-y;
-  background-attachment:
-    scroll,
-    fixed,
-    fixed;
+  background-image: url('assets/img/BackgroundDark.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: transparent;
-}
+} 
 
 @media (max-width: 1210.98px) {
-
-  /* shrink the tree image on narrow viewports */
   body,
   body.dark-mode {
-    /* first pair = Tree/TreeDark, 2nd & 3rd stay as “cover” */
-    background-size:
-      100vw 50vh,
-      /* ↓ adjust these values until it looks right */
-      cover,
-      cover !important;
-    background-position:
-      center calc(100% + 42px),
-      center top,
-      center top;
+    background-size: cover !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
   }
 }
 

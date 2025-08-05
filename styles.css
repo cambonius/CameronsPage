@@ -12972,7 +12972,8 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding-top: 2.375rem;
   width: 100%;
@@ -13109,17 +13110,10 @@ body.dark-mode .slide-up-text {
     transform: translateY(50px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@media (max-width: 1210.98px) {
-  .slide-up-text-two {
-    font-size: 400%;
-    top: 15%;
-    padding: 0.5em 1em;
   }
 }
 
@@ -13147,12 +13141,17 @@ body.dark-mode .slide-up-text-two {
 
 
 body {
-  padding-top: 3.375rem;                /* keep your navbar offset */
+  padding-top: 3.375rem;
+  /* keep your navbar offset */
   background-image: url('assets/img/Background.png');
-  background-position: center center;   /* center on both axes */
-  background-size: cover;               /* always fill, cropping if necessary */
-  background-repeat: no-repeat;         /* no tiling */
-  background-attachment: fixed;         /* optional: fixed for parallax feel */
+  background-position: center center;
+  /* center on both axes */
+  background-size: cover;
+  /* always fill, cropping if necessary */
+  background-repeat: no-repeat;
+  /* no tiling */
+  background-attachment: fixed;
+  /* optional: fixed for parallax feel */
   background-color: transparent;
 }
 
@@ -13164,9 +13163,10 @@ body.dark-mode {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: transparent;
-} 
+}
 
 @media (max-width: 1210.98px) {
+
   body,
   body.dark-mode {
     background-size: cover !important;
@@ -13341,6 +13341,29 @@ body.dark-mode .about-Sherman {
   color: #dbdbdb;
 }
 
+/* bump up the size of the dark-mode portraits */
+.about-image .me-image {
+  /* pick whatever size works — here’s a starting point: */
+  max-width: 300px;
+  width: 50%;
+  height: auto;
+  /* maintain aspect ratio */
+}
+
+.about-image .dog-image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+/* remove bullets and default indents from off-screen menu list */
+.off-screen-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+}
 
 
 /* For Mobile*/
@@ -13471,20 +13494,19 @@ body {
 }
 
 /* at the end of styles.css */
-@media screen and (max-width: 1210.98px) {
+@media screen and (max-width: 768px) {
   /* if you want it in both light‑ and dark‑mode, target .portrait-dark directly: */
 
   /* OR, if you only want this in dark‑mode: */
   body.dark-mode .portrait-dark {
-    max-width: 400px;
+    max-width: 100px;
     width: 100%;
     height: auto;
   }
 
   body.dark-mode .portrait-dark.dog-image {
-    max-width: 400px;
-    width: 50%;
-    margin-right: 8rem;
+    max-width: 80px;
+    width: 100%;
     height: auto;
   }
 
@@ -13683,6 +13705,7 @@ body {
 
 /* Hide custom hamburger and side menu on large screens */
 @media (min-width: 992px) {
+
   .ham-menu,
   .off-screen-menu {
     display: none !important;
@@ -13695,7 +13718,8 @@ body {
 
 @media (min-width: 992px) {
   body {
-    font-size: 1.25rem; /* or 1.125rem */
+    font-size: 1.25rem;
+    /* or 1.125rem */
   }
 
   .resume-section p,
@@ -13705,10 +13729,84 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  #title {
+    background-size: 95vw 45vh;
+    background-position: center calc(80%);
+  }
+}
+
+@media (max-width: 768px) {
+  .title-wrapper {
+    margin-top: -15rem;
+    min-height: 50vh;
+  }
+
+  /* ensure the second line itself isn’t adding extra space */
+  .slide-up-text-two {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* target just your dark-mode portraits */
+  .portrait-dark,
+  .portrait-dark.dog-image {
+    position: static;
+    width: 45%;
+    max-width: 150px;
+    height: auto;
+  }
+}
+
+/* Center dark-mode portraits horizontally */
+body.dark-mode .about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* space between the two images */
+}
+
+body.dark-mode .about-image .me-image,
+body.dark-mode .about-image .dog-image {
+  position: static !important;
+  /* undo the absolute/relative positioning */
+  margin: 0;
+  /* reset any auto or manual offsets */
+}
+
+body.dark-mode .about-image .dog-image {
+  margin-top: 14rem;
+}
+
+@media (max-width: 768px) {
+  body.dark-mode .about-image .dog-image {
+    margin-top: 3.5rem;
+  }
+}
+
 /* default: light-mode portrait visible, dark-mode ones hidden */
-.portrait-light  { display: block; }
-.portrait-dark   { display: none; }
+.portrait-light {
+  display: block;
+}
+
+.portrait-dark {
+  display: none;
+}
 
 /* when body.dark-mode is active: swap them */
-body.dark-mode .portrait-light { display: none; }
-body.dark-mode .portrait-dark  { display: block; }
+body.dark-mode .portrait-light {
+  display: none;
+}
+
+body.dark-mode .portrait-dark {
+  display: block;
+}

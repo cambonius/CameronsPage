@@ -194,7 +194,6 @@ h1 {
 
 hr {
   display: block;
-  width: calc(100% + 15rem);
   border: none;
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
@@ -275,7 +274,6 @@ h2,
 .h2 {
   font-size: 3.5rem;
   text-align: left;
-  margin-left: -15rem;
 }
 
 @media (min-width: 1210.98px) {
@@ -284,7 +282,6 @@ h2,
   .h2 {
     font-size: 3.5rem;
     text-align: left;
-    margin-left: -15rem;
   }
 }
 
@@ -328,7 +325,6 @@ p,
 #education li {
   margin-top: 0;
   text-align: left;
-  margin-left: -15rem;
 }
 
 p,
@@ -8656,7 +8652,6 @@ body.dark-mode.nav {
 }
 
 .m-0 {
-  margin: 0 !important;
   display: block;
   width: 80%;
   margin: 2rem auto;
@@ -8817,7 +8812,6 @@ body.dark-mode.nav {
 
 .mb-0 {
   text-align: left;
-  margin-left: -15rem;
   margin-bottom: 0 !important;
 }
 
@@ -12816,8 +12810,6 @@ p.lead {
   font-family: 'Nunito', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
-  margin-left: -15rem;
-
 }
 
 #sideNav {
@@ -12895,7 +12887,6 @@ p.lead {
   border-radius: 100%;
   text-align: left;
   font-size: 1.5rem;
-  margin-left: -15rem;
 }
 
 .social-icons .social-icon:last-child {
@@ -13266,16 +13257,16 @@ div.year {
 }
 
 .portrait-light {
-  max-width: 300px;
+  max-width: 500px;
   border-radius: 20%;
   border: 3px solid rgba(0, 0, 0, 1);
-  margin-left: -5rem;
   display: block;
+  margin: 0 auto;
 }
 
 
 body.dark-mode .portrait-light {
-  display: none;
+  display: block;
 }
 
 body.dark-mode .portrait-dark {
@@ -13294,14 +13285,15 @@ section#about {
 .about-image .me-image {
   position: relative;
   z-index: 2;
-  right: -3rem;
+  margin: 0 auto;
+  margin-left: 35rem;
 }
 
 .about-image .dog-image {
   position: absolute;
   bottom: 0;
   z-index: 1;
-  right: 18rem;
+  right: 35rem;
 }
 
 .brandeis-seal {
@@ -13318,12 +13310,10 @@ section#about {
 }
 
 #about li {
-  margin-left: -15rem;
   text-align: left !important;
 }
 
 .about-Cameron {
-  margin-left: -12.5rem;
   text-align: center !important;
   font-size: 8.25rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -13445,7 +13435,6 @@ body {
   .portrait-light {
     max-width: 700px;
     size-adjust: 200%;
-    margin-left: -9rem !important;
   }
 
   .portrait-dark {
@@ -13715,3 +13704,11 @@ body {
     line-height: 1.6;
   }
 }
+
+/* default: light-mode portrait visible, dark-mode ones hidden */
+.portrait-light  { display: block; }
+.portrait-dark   { display: none; }
+
+/* when body.dark-mode is active: swap them */
+body.dark-mode .portrait-light { display: none; }
+body.dark-mode .portrait-dark  { display: block; }

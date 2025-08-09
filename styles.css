@@ -333,14 +333,6 @@ p,
   text-align: left;
 }
 
-@media (max-width:1180.98px) {
-
-  /* target all paragraphs and your experience list items */
-  p,
-  #experience li {
-    text-align: left !important;
-  }
-}
 
 
 abbr[title] {
@@ -12880,17 +12872,17 @@ p.lead {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 5.5rem;
+  width: 5.5rem;
   background-color: #495057;
   color: #fff;
   border-radius: 100%;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
 }
 
 .social-icons .social-icon:last-child {
-  margin-left: -9.5rem;
+  margin-left: -15.5rem;
 }
 
 .social-icons .social-icon:hover {
@@ -13383,10 +13375,20 @@ body {
 
   .about-Cameron,
   .about-Sherman {
-    margin-left: 0 !important;
     font-size: 2.5rem !important;
     white-space: normal !important;
   }
+
+  .about-Cameron{
+    margin-left: 1.5rem !important;
+  }
+
+  /* Light mode only: Apply margin to .about-Cameron on mobile */
+@media (max-width: 768px) {
+  body:not(.dark-mode) .about-Cameron {
+    margin-left: 1.5rem !important; /* match dark mode value */
+  }
+}
 
   .container-fluid {
     padding-left: 1rem;
@@ -13433,65 +13435,21 @@ body {
 
 @media (max-width: 1210.98px) {
 
-  /* target the entire h1 */
-  h1.text-nowrap {
-    font-size: 2.5rem;
-    /* adjust this up or down */
-  }
-
-  /* ––– or if you want to target each part separately ––– */
-  .about-Cameron,
-  .about-Sherman {
-    margin-left: -17.5rem !important;
-    /* adjust this to align */
-    font-size: 10.5rem;
-    /* same value so they match */
-  }
-
-  .about-Sherman {
-    margin-left: -27rem !important;
-    /* adjust this to align */
-    font-size: 15rem;
-    /* same value so they match */
-  }
-
   .portrait-light {
-    max-width: 700px;
+    max-width: 250px;
     size-adjust: 200%;
   }
-
-  .portrait-dark {
-    max-width: 100%;
-  }
-
-
 }
 
 /* allow the title to wrap on phones */
-/* stack the name on phones */
-@media (max-width: 1210.98px) {
-
-  /* let the h1 wrap again */
-  h1.text-nowrap {
-    white-space: normal !important;
-    text-align: center;
-    /* optional: center it */
-  }
-
-  /* force each span onto its own line */
+@media (max-width: 768px) {
   .about-Cameron,
   .about-Sherman {
-    display: block;
-  }
-
-  .about-Cameron {
-    margin-left: -15rem !important;
-  }
-
-  .about-Sherman {
-    margin-left: -21rem !important;
+    display: inline-block !important;
+    white-space: nowrap;   /* prevent them from breaking apart */
   }
 }
+
 
 /* at the end of styles.css */
 @media screen and (max-width: 768px) {
@@ -13511,32 +13469,44 @@ body {
   }
 
   #about .subheading.mb-5 {
-    font-size: 2.5rem;
+    font-size: 1rem;
     /* ~24px; adjust to taste */
   }
 
   /* enlarge the lead paragraph */
   #about p.lead {
-    font-size: 2.5rem;
     font-weight: bold;
+    width: 85%;
+    padding: 0 1rem;            /* keep text off the very edge */
+    box-sizing: border-box;     /* include padding in that 100% */
+    white-space: normal;        /* override any nowrap */
+    overflow-wrap: break-word;  /* break long strings onto new lines */
+    word-break: break-word;
+    text-align: center;
+    margin-left: 2rem;
   }
 
   /* enlarge all list items in that block */
   #about .subheading.mb-5+p.lead+ul li,
   p.lead+ul li,
   #about ul li {
-    font-size: 2.5rem;
+    padding: 0 1rem;            /* keep text off the very edge */
+    box-sizing: border-box;     /* include padding in that 100% */
+    white-space: normal;        /* override any nowrap */
+    overflow-wrap: break-word;  /* break long strings onto new lines */
+    word-break: break-word;
+    text-align: center;
     /* ~18px */
   }
 }
 
-@media screen and (max-width: 1210.98px) {
+@media screen and (max-width: 768.98px) {
 
   /* bump up your social icons on narrower viewports */
   .social-icons .social-icon {
-    height: 9.5rem;
-    width: 9.5rem;
-    font-size: 6rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 2rem;
   }
 
   .social-icons {
@@ -13809,4 +13779,16 @@ body.dark-mode .portrait-light {
 
 body.dark-mode .portrait-dark {
   display: block;
+}
+
+/* bring back bullets in the About section */
+#about ul {
+  list-style-type: disc;         /* use the default bullet disk */
+  list-style-position: inside;   /* bullet is part of the text block */
+  margin: 1rem 0;                /* some vertical breathing room */
+  padding-left: 1.5rem;          /* indent the whole list */
+}
+
+#about ul li {
+  display: list-item;            /* ensure each <li> shows its marker */
 }

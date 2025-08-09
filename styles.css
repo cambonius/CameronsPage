@@ -290,11 +290,14 @@ h3,
   font-size: calc(1.325rem + 0.9vw);
 }
 
-@media (min-width: 1210.98px) {
+@media (max-width: 768.98px) {
 
   h3,
   .h3 {
-    font-size: 2rem;
+    font-size: 1.3rem;
+    text-align: left;
+    margin-right: auto;
+    max-width: 70%;
   }
 }
 
@@ -13135,7 +13138,7 @@ body.dark-mode .slide-up-text-two {
 body {
   padding-top: 3.375rem;
   /* keep your navbar offset */
-  background-image: url('assets/img/Background.png');
+  background-image: url('assets/img/NewBG.png');
   background-position: center center;
   /* center on both axes */
   background-size: cover;
@@ -13289,16 +13292,39 @@ section#about {
 }
 
 .brandeis-seal {
-  max-width: 50%;
+  max-width: 60%;
   height: auto;
   margin-top: 10px;
 }
 
+#education .brandeis-seal,
+#education .subheading.mb-3.right {
+  margin-right: 5rem;
+}
+
+@media (max-width: 768px) {
+  #education .brandeis-seal,
+  #education .subheading.mb-3.right {
+    margin-right: 0rem;
+  }
+}
+
+#education .brandeis-seal,
+#education .calhoun-seal {
+  width: 80%;
+  max-width: 140px;
+  height: auto;
+}
+
+.brandeis-seal,
 .calhoun-seal {
-  max-width: 40%;
+  max-width: none;
+}
+
+.calhoun-seal {
+  max-width: 30%;
   height: auto;
   margin-top: 10px;
-  margin-right: -7rem;
 }
 
 #about li {
@@ -13379,16 +13405,17 @@ body {
     white-space: normal !important;
   }
 
-  .about-Cameron{
+  .about-Cameron {
     margin-left: 1.5rem !important;
   }
 
   /* Light mode only: Apply margin to .about-Cameron on mobile */
-@media (max-width: 768px) {
-  body:not(.dark-mode) .about-Cameron {
-    margin-left: 1.5rem !important; /* match dark mode value */
+  @media (max-width: 768px) {
+    body:not(.dark-mode) .about-Cameron {
+      margin-left: 1.5rem !important;
+      /* match dark mode value */
+    }
   }
-}
 
   .container-fluid {
     padding-left: 1rem;
@@ -13443,10 +13470,12 @@ body {
 
 /* allow the title to wrap on phones */
 @media (max-width: 768px) {
+
   .about-Cameron,
   .about-Sherman {
     display: inline-block !important;
-    white-space: nowrap;   /* prevent them from breaking apart */
+    white-space: nowrap;
+    /* prevent them from breaking apart */
   }
 }
 
@@ -13477,10 +13506,14 @@ body {
   #about p.lead {
     font-weight: bold;
     width: 85%;
-    padding: 0 1rem;            /* keep text off the very edge */
-    box-sizing: border-box;     /* include padding in that 100% */
-    white-space: normal;        /* override any nowrap */
-    overflow-wrap: break-word;  /* break long strings onto new lines */
+    padding: 0 1rem;
+    /* keep text off the very edge */
+    box-sizing: border-box;
+    /* include padding in that 100% */
+    white-space: normal;
+    /* override any nowrap */
+    overflow-wrap: break-word;
+    /* break long strings onto new lines */
     word-break: break-word;
     text-align: center;
     margin-left: 2rem;
@@ -13490,10 +13523,14 @@ body {
   #about .subheading.mb-5+p.lead+ul li,
   p.lead+ul li,
   #about ul li {
-    padding: 0 1rem;            /* keep text off the very edge */
-    box-sizing: border-box;     /* include padding in that 100% */
-    white-space: normal;        /* override any nowrap */
-    overflow-wrap: break-word;  /* break long strings onto new lines */
+    padding: 0 1rem;
+    /* keep text off the very edge */
+    box-sizing: border-box;
+    /* include padding in that 100% */
+    white-space: normal;
+    /* override any nowrap */
+    overflow-wrap: break-word;
+    /* break long strings onto new lines */
     word-break: break-word;
     text-align: center;
     /* ~18px */
@@ -13520,43 +13557,139 @@ body {
 }
 
 /* ── EXPERIENCE SECTION TYPOGRAPHY ── */
-@media screen and (max-width: 1210.98px) {
+@media screen and (max-width: 768.98px) {
 
   /* center and enlarge the section title */
   #experience .section-heading,
   #experience h2 {
     text-align: center !important;
-    font-size: 5rem !important;
+    font-size: 3rem !important;
     /* adjust as needed */
   }
+
+  #experience .year {
+    font-size: 1.2rem;
+    /* adjust as needed */
+  }
+
+  .subheading.mb-3:not(.year) {
+    font-size: 0.6rem;
+    /* adjust to your preference */
+    font-weight: 300;
+  }
+
+  .subheading.mb-3.company {
+    font-size: 100%;
+  }
+
 
   /* enlarge all text inside the experience block */
   #experience p,
   #experience ul li {
-    font-size: 1.5rem;
-    /* ~20px; tweak as desired */
-    line-height: 1.6;
-    /* keep good readability */
+    line-height: 1.5;
   }
 }
 
-@media screen and (max-width: 1210.98px) {
+@media (max-width: 768px) {
+
+  /* Turn each job row into a small grid */
+  .d-flex.flex-column.flex-md-row.justify-content-between {
+    display: grid !important;
+    grid-template-columns: 1fr 40%;
+    /* left fluid, right fixed-ish */
+    grid-template-rows: auto auto 1fr;
+    /* title, company, then bullets */
+    column-gap: 0.75rem;
+    align-items: start;
+  }
+
+  /* Left side spans the whole grid so bullets can flow under the right block */
+  .d-flex.flex-column.flex-md-row.justify-content-between .flex-grow-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+  }
+
+  /* Keep the right block next to the title/company and vertically centered */
+  .d-flex.flex-column.flex-md-row.justify-content-between .flex-shrink-0.subheading.mb-3.right {
+    grid-column: 2;
+    /* right column */
+    grid-row: 1 / span 2;
+    /* same rows as title + company */
+    align-self: center;
+    /* vertically centered between them */
+    text-align: right;
+  }
+
+  /* Optional: prevent the job title from running underneath the right block */
+  .d-flex.flex-column.flex-md-row.justify-content-between h3 {
+    margin-right: 40%;
+  }
+}
+
+
+
+@media screen and (max-width: 768.98px) {
 
   /* center and enlarge the section title */
   #education .section-heading,
   #education h2 {
     text-align: center !important;
-    font-size: 5rem !important;
+    font-size: 3rem !important;
     /* adjust as needed */
   }
 
   /* enlarge all text inside the experience block */
   #education p,
   #education ul li {
-    font-size: 2.3rem;
-    /* ~20px; tweak as desired */
     line-height: 1.5;
+    max-width: 60%;
     /* keep good readability */
+  }
+
+  /* Turn each Education row into a grid */
+  #education .d-flex.flex-column.flex-md-row.justify-content-between {
+    display: grid !important;
+    grid-template-columns: 1fr 36%;
+    /* left fluid, right fixed-ish */
+    grid-template-rows: auto auto 1fr;
+    /* title, subheading, rest */
+    column-gap: 0.75rem;
+    align-items: start;
+  }
+
+  /* Left column spans so bullets/paragraphs can flow under the logo */
+  #education .flex-grow-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+  }
+
+  /* Right column (dates + logo) lives in the right grid column */
+  #education .flex-shrink-0.text-center {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    /* sits beside title + degree */
+    align-self: center;
+    /* centers vertically in that zone */
+    text-align: right !important;
+    /* align the date text to the right */
+  }
+
+  #education .brandeis-seal,
+  #education .calhoun-seal {
+    width: 80%;
+    /* fills the right column */
+    max-width: 140px;
+    /* cap size; tweak 120–160px as you like */
+    height: auto;
+    display: inline-block;
+    margin-top: 8rem;
+  }
+
+  /* Small spacing tweak so the date isn't too tight above the logo */
+  #education .flex-shrink-0 .text-primary {
+    display: block;
+    margin-bottom: 3rem;
+    margin-right: 1rem;
   }
 }
 
@@ -13588,8 +13721,19 @@ body {
     display: none;
   }
 
+  /* Light mode: black hamburger bars */
+  .ham-menu span {
+    background-color: black;
+  }
+
+  /* Dark mode: white hamburger bars */
+  body.dark-mode .ham-menu span {
+    background-color: white;
+  }
+
+
   .off-screen-menu {
-    background-image: url('assets/img/Background.png');
+    background-image: url('assets/img/NewBG.png');
     height: 100vh;
     width: 100%;
     max-width: 500px;
@@ -13649,6 +13793,21 @@ body {
     transform: translate(-50%, -50%);
     transition: .3s ease;
   }
+
+  /* Mobile hamburger colors */
+  @media (max-width: 425px) {
+
+    /* light mode = black bars */
+    body:not(.dark-mode) .ham-menu span {
+      background-color: #000 !important;
+    }
+
+    /* dark mode = white bars */
+    body.dark-mode .ham-menu span {
+      background-color: #fff !important;
+    }
+  }
+
 
   .ham-menu span:nth-child(1) {
     top: 25%;
@@ -13783,12 +13942,17 @@ body.dark-mode .portrait-dark {
 
 /* bring back bullets in the About section */
 #about ul {
-  list-style-type: disc;         /* use the default bullet disk */
-  list-style-position: inside;   /* bullet is part of the text block */
-  margin: 1rem 0;                /* some vertical breathing room */
-  padding-left: 1.5rem;          /* indent the whole list */
+  list-style-type: disc;
+  /* use the default bullet disk */
+  list-style-position: inside;
+  /* bullet is part of the text block */
+  margin: 1rem 0;
+  /* some vertical breathing room */
+  padding-left: 1.5rem;
+  /* indent the whole list */
 }
 
 #about ul li {
-  display: list-item;            /* ensure each <li> shows its marker */
+  display: list-item;
+  /* ensure each <li> shows its marker */
 }

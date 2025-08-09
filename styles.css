@@ -8649,7 +8649,7 @@ body.dark-mode.nav {
 .m-0 {
   display: block;
   width: 80%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border: none;
   border-top: 1.5px solid #7d7d7d;
   opacity: 1;
@@ -12900,7 +12900,7 @@ p.lead {
 section.resume-section {
   display: flex;
   align-items: center;
-  min-height: 100dvh;
+  min-height: 85dvh;
 }
 
 section.resume-section .resume-section-content {
@@ -13046,10 +13046,13 @@ body.dark-mode .nav-link {
   background-attachment: scroll;
 }
 
+
 /* swap to the dark-mode tree when in dark mode */
 body.dark-mode #title {
   background-image: url('assets/img/TreeDark.png');
 }
+
+
 
 .title-wrapper {
   min-height: 65vh;
@@ -13305,7 +13308,7 @@ section#about {
 @media (max-width: 768px) {
   #education .brandeis-seal,
   #education .subheading.mb-3.right {
-    margin-right: 0rem;
+    margin-right: 5%;
   }
 }
 
@@ -13576,10 +13579,13 @@ body {
     font-size: 0.6rem;
     /* adjust to your preference */
     font-weight: 300;
+    margin-right: 5%;
+    margin-left: 2%;
   }
 
   .subheading.mb-3.company {
     font-size: 100%;
+    margin-left: 2%;
   }
 
 
@@ -13587,6 +13593,7 @@ body {
   #experience p,
   #experience ul li {
     line-height: 1.5;
+    margin-left: 2%;
   }
 }
 
@@ -13623,6 +13630,7 @@ body {
   /* Optional: prevent the job title from running underneath the right block */
   .d-flex.flex-column.flex-md-row.justify-content-between h3 {
     margin-right: 40%;
+    margin-left: 2%;
   }
 }
 
@@ -13643,6 +13651,7 @@ body {
   #education ul li {
     line-height: 1.5;
     max-width: 60%;
+    margin-left: 2%;
     /* keep good readability */
   }
 
@@ -13861,7 +13870,6 @@ body {
 @media (max-width: 768px) {
   #title {
     background-size: 95vw 45vh;
-    background-position: center calc(80%);
   }
 }
 

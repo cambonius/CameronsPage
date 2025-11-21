@@ -101,7 +101,7 @@
 
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #212529;
+  background-color: #0b1833;
   color: white;
   --primary-green: #198754;
   /* Keep the same color in dark mode */
@@ -177,9 +177,23 @@ body {
   color: #343A40;
   /* Dark gray for light mode */
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: #ffffff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#hexBackground {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  background-color: #ffffff;
+}
+
+body.dark-mode #hexBackground {
+  background-color: #0b1833;
 }
 
 /* Default (Light Mode) */
@@ -13038,18 +13052,11 @@ body.dark-mode .nav-link {
   justify-content: center;
   align-items: center;
   position: relative;
-  /* pull the light-mode tree into the title section */
-  background-image: url('assets/img/Tree.png');
-  background-position: center calc(100%);
-  background-size: 50vw 75vh;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  padding-bottom: 0;
 }
 
 
-/* swap to the dark-mode tree when in dark mode */
 body.dark-mode #title {
-  background-image: url('assets/img/TreeDark.png');
 }
 
 
@@ -13060,8 +13067,12 @@ body.dark-mode #title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
   position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: clamp(7rem, 14vw, 16rem);
 }
 
 .slide-up-text {
@@ -13079,6 +13090,25 @@ body.dark-mode #title {
 
 body.dark-mode .slide-up-text {
   color: #dbdbdb;
+}
+
+.title-tree {
+  position: absolute;
+  bottom: clamp(-4rem, -6vw, -1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.title-tree-image {
+  max-width: 50%;
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.25));
 }
 
 @media (max-width: 768.98px) {
@@ -13402,6 +13432,12 @@ iframe,
 video {
   max-width: 1000%;
   height: auto;
+}
+
+.tree-media {
+  max-width: 50%;
+  height: auto;
+  display: block;
 }
 
 body {
@@ -13884,6 +13920,10 @@ body {
   #title {
     background-size: 95vw 45vh;
   }
+
+  .title-tree-image {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -13983,5 +14023,5 @@ body.dark-mode .portrait-dark {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 10 auto;
+  margin: 10px auto;
 }

@@ -283,22 +283,6 @@ h2,
   font-size: calc(1.475rem + 2.7vw);
 }
 
-
-h2,
-.h2 {
-  font-size: 3.5rem;
-  text-align: left;
-}
-
-@media (min-width: 1210.98px) {
-
-  h2,
-  .h2 {
-    font-size: 3.5rem;
-    text-align: left;
-  }
-}
-
 h3,
 .h3 {
   font-size: calc(1.325rem + 0.9vw);
@@ -13266,9 +13250,11 @@ h3.mb-0 {
 
 
 .section-title {
-  font-family: 'Besley', serif;
+  font-family: 'Libre Baskerville', serif;
   font-weight: 700;
   text-transform: none;
+  text-align: center;
+  align-items: center;
 }
 
 div.right {

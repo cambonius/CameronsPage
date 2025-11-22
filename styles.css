@@ -330,11 +330,23 @@ p,
 
 p,
 #experience li {
-  margin-top: 0;
+  margin-top: 0.5%;
   text-align: left;
 }
 
+#experience li {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  margin-left: 17.5%;
+}
 
+#experience h3.mb-0 {
+  margin-left: 17.5%;
+}
+
+#education h3.mb-0 {
+  margin-left: 17.5%;
+}
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
@@ -660,6 +672,12 @@ progress {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+.jobtitlelead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .display-1 {
@@ -12887,7 +12905,7 @@ p.lead {
 }
 
 .social-icons .social-icon:hover {
-  background-color: #198754;
+  background-color: #0d6efd;
 }
 
 .dev-icons {
@@ -13039,9 +13057,6 @@ body.dark-mode .nav-link {
   padding-bottom: 0;
 }
 
-
-body.dark-mode #title {
-}
 
 
 
@@ -13238,14 +13253,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Apply Besley font to job titles */
+
 h3.mb-0 {
-  font-family: 'Besley', serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
-/* Apply Besley font to company/location lines */
+/* Apply Libre Baskerville font to company/location lines */
 .subheading.mb-3 {
-  font-family: 'Besley', serif;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.company, .degree {
+  margin-left: 17%;
 }
 
 
@@ -13262,6 +13281,7 @@ div.right {
   font-weight: 500;
   font-size: 1rem;
   color: #000;
+  margin-right: 12.5%;
 }
 
 div.year {
@@ -13617,12 +13637,6 @@ body {
     margin-right: 5%;
     margin-left: 2%;
   }
-
-  .subheading.mb-3.company {
-    font-size: 100%;
-    margin-left: 2%;
-  }
-
 
   /* enlarge all text inside the experience block */
   #experience p,

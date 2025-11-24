@@ -13329,20 +13329,24 @@ section#about {
 
 .about-image {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .about-image .me-image {
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  margin-left: 35rem;
+  margin-left: 0;
 }
 
 .about-image .dog-image {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: auto;
   z-index: 1;
-  right: 35rem;
+  right: auto;
 }
 
 .brandeis-seal {
@@ -13383,22 +13387,39 @@ section#about {
 
 #about li {
   text-align: left !important;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+#about .subheading {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#about p.lead {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+#about .about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-Cameron,
+.about-Sherman {
+  text-align: center !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2.5rem, 5vw + 0.5rem, 4rem);
 }
 
 .about-Cameron {
-  text-align: center !important;
-  font-size: 8.25rem;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-right: 2rem;
-  font-size: 6rem;
+  margin-right: 1rem;
 }
 
 .about-Sherman {
-  text-align: center !important;
-  font-size: 8.25rem;
-  font-family: Arial, Helvetica, sans-serif;
   margin-left: 0.5rem;
-  font-size: 6rem;
 }
 
 .about-Cameron {
@@ -13417,18 +13438,16 @@ body.dark-mode .about-Sherman {
   color: #dbdbdb;
 }
 
-/* bump up the size of the dark-mode portraits */
+/* Portrait sizing */
 .about-image .me-image {
-  /* pick whatever size works — here’s a starting point: */
-  max-width: 300px;
-  width: 50%;
+  max-width: 240px;
+  width: 40%;
   height: auto;
-  /* maintain aspect ratio */
 }
 
 .about-image .dog-image {
-  max-width: 200px;
-  width: 100%;
+  max-width: 150px;
+  width: 80%;
   height: auto;
 }
 
@@ -13459,6 +13478,49 @@ video {
 body {
   font-size: 100%;
   line-height: 1.5;
+}
+
+.experience-education-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.experience-column,
+.education-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-divider {
+  width: 1.5px;
+  background-color: #7d7d7d;
+  display: block;
+  align-self: stretch;
+}
+
+@media (min-width: 993px) {
+  .education-column {
+    order: 1;
+  }
+
+  .experience-divider {
+    order: 2;
+  }
+
+  .experience-column {
+    order: 3;
+  }
+}
+
+@media (max-width: 992px) {
+  .experience-education-wrapper {
+    flex-direction: column;
+  }
+
+  .experience-divider {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {

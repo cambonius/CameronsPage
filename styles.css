@@ -340,6 +340,12 @@ p,
   margin-left: 17.5%;
 }
 
+#education li {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  margin-left: 17.5%;
+}
+
 #experience h3.mb-0 {
   margin-left: 17.5%;
 }
@@ -13265,6 +13271,10 @@ h3.mb-0 {
 
 .company, .degree {
   margin-left: 17%;
+}
+
+.acsoc {
+  margin-left: 17.25%;
 }
 
 

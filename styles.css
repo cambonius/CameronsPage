@@ -13077,7 +13077,8 @@ body.dark-mode .nav-link {
   position: relative;
   width: 100%;
   height: 100%;
-  padding-bottom: clamp(7rem, 14vw, 16rem);
+  --tree-offset: clamp(18rem, 22vw, 26rem);
+  padding-bottom: var(--tree-offset);
 }
 
 .slide-up-text {
@@ -13099,7 +13100,7 @@ body.dark-mode .slide-up-text {
 
 .title-tree {
   position: absolute;
-  bottom: clamp(-23.5rem, -14vw, -25rem);
+  bottom: calc(var(--tree-offset) * -0.94);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
